@@ -11,7 +11,7 @@ import Video from "../components/Video";
 
 export default function Main() {
   const router = useRouter;
-  // whatthefuck
+
   return (
     <div
       style={{
