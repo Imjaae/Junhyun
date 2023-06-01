@@ -29,7 +29,11 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "pages/mypage.jsx",
-    "pages/PersonalProject/Hailmacuf.jsx"
+    "pages/PersonalProject/Hailmacuf.jsx",
+    "components/PeronalProject.jsx",
+    "components/Video.jsx",
+    "components/Portrait.jsx",
+    "components/Editorial.jsx"
   ],
   "exclude": ["node_modules"]
 }

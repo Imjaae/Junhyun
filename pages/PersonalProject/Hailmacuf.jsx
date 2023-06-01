@@ -10,10 +10,44 @@ export default function Hailmacuf() {
   const trackPos = (data) => {
     setPosition({ x: data.x, y: data.y });
   };
+  const HailImg = [
+    "/hailmacuf/1.webp",
+    "/hailmacuf/2.webp",
+    "/hailmacuf/3.webp",
+    "/hailmacuf/4.webp",
+    "/hailmacuf/5.webp",
+    "/hailmacuf/6.webp",
+    "/hailmacuf/7.webp",
+    "/hailmacuf/8.webp",
+    "/hailmacuf/9.webp",
+  ];
+
+  const HailImgs = [{ 1: "/hailmacuf/1.webp" }, { 2: "/hailmacuf/2.webp" }];
+  console.log("HailImgs", HailImgs);
+  const dd = HailImg?.map((item) => {
+    return item;
+  });
+  console.log("dd", dd);
+  const [isModal, setIsModal] = useState(false);
+  const showModal = (e) => {
+    setIsModal(!isModal);
+  };
+
+  const SrcImg = HailImg?.map((item) => console.log("eee", item));
 
   return (
     <>
       <Header />
+      {isModal ? (
+        <div>
+          <ImgModal onClick={showModal} />
+          <ModalImgBox src={HailImg[0]} />
+        </div>
+      ) : null}
+      {HailImgs &&
+        HailImgs.map((item) => {
+          <img src={item[0]} alt="dd" />;
+        })}
       <div
         style={{
           display: "flex",
@@ -24,23 +58,17 @@ export default function Hailmacuf() {
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/1.webp" />
+              <ImageBox src={HailImg[0]} onClick={showModal} alt="hailImg1" />
             </h2>
           </Div>
         </Draggable>
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/2.webp" />
+              <ImageBox src={HailImg[1]} onClick={showModal} alt="hailImg2" />
             </h2>
           </Div>
         </Draggable>
-        {/* <Link href="/">
-          <button>back</button>
-        </Link>
-        <Link href="/Header">
-          <button>go</button>
-        </Link> */}
       </div>
       <div
         style={{
@@ -52,23 +80,17 @@ export default function Hailmacuf() {
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/3.webp" />
+              <ImageBox src={HailImg[2]} alt="hailImg3" />
             </h2>
           </Div>
         </Draggable>
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/4.webp" />
+              <ImageBox src={HailImg[3]} alt="hailImg4" />
             </h2>
           </Div>
         </Draggable>
-        {/* <Link href="/">
-          <button>back</button>
-        </Link>
-        <Link href="/Header">
-          <button>go</button>
-        </Link> */}
       </div>
       <div
         style={{
@@ -80,23 +102,17 @@ export default function Hailmacuf() {
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/5.webp" />
+              <ImageBox src={HailImg[4]} alt="hailImg5" />
             </h2>
           </Div>
         </Draggable>
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/6.webp" />
+              <ImageBox src={HailImg[5]} alt="hailImg6" />
             </h2>
           </Div>
         </Draggable>
-        {/* <Link href="/">
-          <button>back</button>
-        </Link>
-        <Link href="/Header">
-          <button>go</button>
-        </Link> */}
       </div>
       <div
         style={{
@@ -108,21 +124,21 @@ export default function Hailmacuf() {
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/7.webp" />
+              <ImageBox src={HailImg[6]} alt="hailImg7" />
             </h2>
           </Div>
         </Draggable>
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/8.webp" />
+              <ImageBox src={HailImg[7]} alt="hailImg8" />
             </h2>
           </Div>
         </Draggable>
         <Draggable onDrag={(data) => trackPos(data)}>
           <Div className="box">
             <h2>
-              <ImageBox src="/hailmacuf/9.webp" />
+              <ImageBox src={HailImg[8]} alt="hailImg9" />
             </h2>
           </Div>
         </Draggable>
@@ -130,6 +146,24 @@ export default function Hailmacuf() {
     </>
   );
 }
+
+const ImgModal = styled.div`
+  width: 110%;
+  height: 110%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 1000;
+`;
+
+const ModalImgBox = styled.img`
+  height: 90%;
+  object-fit: contain;
+  position: fixed;
+  z-index: 1001;
+  overflow: hidden;
+  left: 35vw;
+  top: 6vh;
+`;
 
 const Div = styled.div`
   width: 37.5%;
