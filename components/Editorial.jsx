@@ -89,7 +89,7 @@ export default function Editorial() {
               <h2>
                 {isDropped ? (
                   <ImageBox
-                    src="/Industry56-32/47.webp"
+                    src="/industry56-32/40.webp"
                     alt="industry56-32"
                     draggable="true"
                   />
@@ -104,7 +104,7 @@ export default function Editorial() {
                     }}
                   >
                     <ImageBox
-                      src="/Industry56-32/47.webp"
+                      src="/industry56-32/40.webp"
                       alt="industry56-32"
                       draggable="true"
                       style={{
