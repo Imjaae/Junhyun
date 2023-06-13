@@ -21,23 +21,23 @@ export default function mypage() {
         <Wrap>
           <Icon src="/icons/arrow.png" />
           <Icon src="/icons/phone.png" />
-          <Link href="https://www.instagram.com/0.ldskool/">
-            <Instagram>(+82)10 5390 0392</Instagram>
-          </Link>
+          {/* <Link href="https://www.instagram.com/0.ldskool/"> */}
+          <Instagram>(+82)10 5390 0392</Instagram>
+          {/* </Link> */}
         </Wrap>
         <Wrap>
           <Icon src="/icons/arrow.png" />
           <Icon src="/icons/instagram.png" />
-          <Link href="https://www.instagram.com/0.ldskool/">
-            <Instagram>0.ldskool</Instagram>
+          <Link href="https://www.instagram.com/junhyunarchive/">
+            <Instagram>junhyunarchive</Instagram>
           </Link>
         </Wrap>
         <Wrap>
           <Icon src="/icons/arrow.png" />
           <Icon src="/icons/MessageFull.png" />
-          <Link href="https://www.instagram.com/0.ldskool/">
-            <Instagram>dlawodud96@naver.com</Instagram>
-          </Link>
+          {/* <Link href="https://www.instagram.com/0.ldskool/"> */}
+          <Instagram>dlawodud96@naver.com</Instagram>
+          {/* </Link> */}
         </Wrap>
       </div>
       <div></div>
@@ -87,6 +87,6 @@ const Instagram = styled.div`
   text-decoration: underline white;
   &:hover {
     cursor: pointer;
-    color: tomato;
+    /* color: tomato; */
   }
 `;
