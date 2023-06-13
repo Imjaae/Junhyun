@@ -59,6 +59,8 @@ const EachCategory = styled.div`
 `;
 
 const Title = styled.div`
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
   font-size: 0.9rem;
-  font-weight: 100;
 `;

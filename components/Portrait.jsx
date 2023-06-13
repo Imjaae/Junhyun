@@ -98,7 +98,7 @@ const Project = styled.div`
   display: inline-flex;
   flex-direction: row;
   align-items: flex-end;
-  margin: 0px 20px 3px 0px;
+  margin: 0px 15px 3px 0px;
 `;
 
 const TitleWrap = styled.div`
@@ -116,14 +116,20 @@ const Title = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  font-family: "Savoye LET";
+  font-style: normal;
   font-size: 3vw;
-  font-weight: 400;
+  font-family: "Garamond-Serial-Light";
+  font-style: normal;
+  font-weight: 300;
   white-space: nowrap;
   margin-right: 6px;
   word-break: break-all;
   &:hover {
-    font-style: italic;
-    font-weight: 600;
+    font-family: "Savoye LET";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
     text-decoration: tomato wavy underline;
   }
 `;

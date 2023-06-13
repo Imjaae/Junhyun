@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <HeaderWrap>
       <Link href="/">
-        <Div>Jun Hyun Choi</Div>
+        <Div>JUNHYUNARCHIVE</Div>
       </Link>
       <Link href="/mypage">
         <AboutBtn>ABOUT</AboutBtn>
@@ -26,19 +26,19 @@ const HeaderWrap = styled.div`
 `;
 
 const Div = styled.div`
+  font-family: "Helvetica Neue";
+  font-style: normal;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
   color: black;
   text-decoration: underline white;
-  &:hover {
-    cursor: pointer;
-    color: tomato;
-    font-weight: 400;
-  }
+  cursor: pointer;
 `;
 
 const AboutBtn = styled.button`
+  font-family: "Helvetica Neue";
+  font-style: normal;
   font-size: 1.5rem;
   padding-right: 50px;
   border: none;
